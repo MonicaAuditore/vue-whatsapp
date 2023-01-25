@@ -67,10 +67,14 @@
             <ul>
               <li class="friendsBox" v-for="(singleUser, index) in contacts">
                 <div class="datiUser">
-                  <img class="friendsImg" src="img/avatar_1.jpg" />
+                  <img
+                    class="friendsImg"
+                    src="'img/avatar' + {{singleUser.avatar}} + '.jpg'"
+                  />
+
                   <div class="nomeText">
-                    <h5>Name</h5>
-                    <h6>Ultimo messaggio</h6>
+                    <h5>{{singleUser.name}}</h5>
+                    <h6>Ultimo messaggio inviato</h6>
                   </div>
                 </div>
                 <div class="ora"><h6>ora</h6></div>
@@ -82,7 +86,41 @@
         </div>
         <!-- fine left side -->
         <!-- inizio right side -->
-        <div class="rightSide"></div>
+        <div class="rightSide">
+          <div class="header header-right">
+            <div class="userimg">
+              <img src="img/avatar_io.jpg" class="cover" />
+
+              <div class="textUser">
+                <h5>Michele</h5>
+                <h6>Ultimo accesso oggi alle 12.00</h6>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="i fa-solid fa-magnifying-glass"></i>
+              <i class="i fa-solid fa-paperclip"></i>
+              <i class="i fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <div class="main"></div>
+          <!-- footer -->
+          <div class="header footer-right">
+            <div class="">
+              <i class="i fa-regular fa-face-smile"></i>
+            </div>
+            <div class="inputMessaggio">
+              <input
+                type="text"
+                id=""
+                name=""
+                placeholder="Scrivi un messaggio"
+              />
+            </div>
+            <div class="">
+              <i class="i fa-solid fa-microphone"></i>
+            </div>
+          </div>
+        </div>
         <!-- fine right side -->
       </div>
     </div>
