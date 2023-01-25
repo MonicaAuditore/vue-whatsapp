@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +35,7 @@ body {
   width: 30%;
   height: 100%;
   background-color: #fff;
+  border-right: 1px solid rgb(211, 211, 211);
 }
 
 .rightSide {
@@ -41,4 +43,88 @@ body {
   width: 70%;
   height: 100%;
   background: #e5ddd5;
+}
+
+.rightSide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/mine.jpg);
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background: #ededed;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userimg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nomeUser {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.userimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i {
+  margin: 0px 4px;
+  color: #9c9e9e;
+}
+
+.notifiche {
+  width: 100%;
+  height: 60px;
+  background: #8dd8fa;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+}
+
+.iconNotifiche {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconNotifiche i {
+  color: #8dd8fa;
+}
+
+.notifiche h5 {
+  font-weight: 400;
+}
+
+.notifiche h6 {
+  font-weight: 400;
+  color: rgb(37, 37, 37);
+  text-decoration: underline;
 }

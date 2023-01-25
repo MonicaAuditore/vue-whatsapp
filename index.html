@@ -5,14 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- font awasome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fine font awasome link -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fine google font link -->
     <title>Vue Boolzapp</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="root">
       <div class="container">
-        <div class="leftSide"></div>
+        <!-- inizio left side -->
+        <div class="leftSide">
+          <div class="header">
+            <div class="userimg">
+              <img src="img/avatar_io.jpg" class="cover" />
+              <span class="nomeUser">Nome</span>
+              <div class="name"><span></span></div>
+            </div>
+            <div class="icon">
+              <i class="i fa-solid fa-circle-notch"></i>
+              <i class="i fa-solid fa-message"></i>
+              <i class="i fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <div class="notifiche">
+            <div class="iconNotifiche">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div class="textNotifiche">
+              <h5>Ricevi notifiche di nuovi messaggi</h5>
+              <h6>Attiva notifiche desktop</h6>
+            </div>
+          </div>
+          <!-- fine header left side-->
+        </div>
+        <!-- fine left side -->
+        <!-- inizio right side -->
         <div class="rightSide"></div>
+        <!-- fine right side -->
       </div>
     </div>
     <!-- divisore -->
