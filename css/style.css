@@ -197,6 +197,13 @@ ul {
   justify-content: space-between;
 }
 
+.userFirst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .main {
   background: #e5ddd5;
   background-image: url(../img/mine.jpg);
