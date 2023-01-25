@@ -66,8 +66,10 @@
           <div class="mainUsers">
             <ul>
               <li
-                @click="assegnaActive(index)"
+                id="idLi"
+                @click="activeTrueFalse(index)"
                 class="friendsBox"
+                :class="testored(index)"
                 v-for="(singleUser, index) in contacts"
               >
                 <div class="datiUser">

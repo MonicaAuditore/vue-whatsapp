@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      utenteCorrent: 0,
+      utenteCorrente: "red",
+      active: true,
       contacts: [
         {
           name: "Michele",
@@ -170,10 +171,17 @@ createApp({
     };
   },
   methods: {
-    assegnaActive(index) {
-      this.contacts[index] = this.contacts[0];
-      this.contacts[0] = this.contacts[1];
-      console.log("test");
+    activeTrueFalse() {
+      this.active = !this.active;
+      console.log(this.active);
+    },
+
+    testored(index) {
+      if (this.active) {
+        return;
+      } else {
+        return this.utenteCorrente;
+      }
     },
   },
 }).mount("#root");
