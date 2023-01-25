@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      message: "test",
       contacts: [
         {
           name: "Michele",
@@ -16,7 +17,7 @@ createApp({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "Ricordati di dargli da mangiare",
+              message: "Ricordati di stendere i panni",
               status: "sent",
             },
             {
@@ -44,7 +45,7 @@ createApp({
             {
               date: "20/03/2020 16:35:00",
               message: "Mi piacerebbe ma devo andare a fare la spesa.",
-              status: "received",
+              status: "sent",
             },
           ],
         },
@@ -71,7 +72,7 @@ createApp({
           ],
         },
         {
-          name: "Luisa",
+          name: "Alessandro B.",
           avatar: "_4",
           visible: true,
           messages: [
@@ -83,6 +84,84 @@ createApp({
             {
               date: "10/01/2020 15:50:00",
               message: "Si, ma preferirei andare al cinema",
+              status: "received",
+            },
+          ],
+        },
+        {
+          name: "Alessandro L.",
+          avatar: "_5",
+          visible: true,
+          messages: [
+            {
+              date: "10/01/2020 15:30:55",
+              message: "Ricordati di chiamare la nonna",
+              status: "sent",
+            },
+            {
+              date: "10/01/2020 15:50:00",
+              message: "Va bene, stasera la sento",
+              status: "received",
+            },
+          ],
+        },
+        {
+          name: "Claudia",
+          avatar: "_6",
+          visible: true,
+          messages: [
+            {
+              date: "10/01/2020 15:30:55",
+              message: "Ciao Claudia, hai novità?",
+              status: "sent",
+            },
+            {
+              date: "10/01/2020 15:50:00",
+              message: "Non ancora",
+              status: "received",
+            },
+            {
+              date: "10/01/2020 15:51:00",
+              message: "Nessuna nuova, buona nuova",
+              status: "sent",
+            },
+          ],
+        },
+        {
+          name: "Federico",
+          avatar: "_7",
+          visible: true,
+          messages: [
+            {
+              date: "10/01/2020 15:30:55",
+              message: "Fai gli auguri a Martina che è il suo compleanno!",
+              status: "sent",
+            },
+            {
+              date: "10/01/2020 15:50:00",
+              message: "Grazie per avermelo ricordato, le scrivo subito!",
+              status: "received",
+            },
+          ],
+        },
+        {
+          name: "Davide",
+          avatar: "_8",
+          visible: true,
+          messages: [
+            {
+              date: "10/01/2020 15:30:55",
+              message: "Ciao, andiamo a mangiare la pizza stasera?",
+              status: "received",
+            },
+            {
+              date: "10/01/2020 15:50:00",
+              message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
+              status: "sent",
+            },
+            {
+              date: "10/01/2020 15:51:00",
+              message: "OK!!",
               status: "received",
             },
           ],

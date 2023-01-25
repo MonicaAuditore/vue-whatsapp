@@ -33,7 +33,7 @@
           <div class="header">
             <div class="userimg">
               <img src="img/avatar_io.jpg" class="cover" />
-              <span class="nomeUser">Nome</span>
+              <span class="nomeUser">Sofia</span>
               <div class="name"><span></span></div>
             </div>
             <div class="icon">
@@ -51,6 +51,33 @@
               <h6>Attiva notifiche desktop</h6>
             </div>
           </div>
+          <div class="search">
+            <div>
+              <input
+                type="text"
+                id=""
+                name=""
+                placeholder="Cerca o inizia una nuova chat"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <!-- inizio caselle utente-->
+          <div class="mainUsers">
+            <ul>
+              <li class="friendsBox" v-for="(singleUser, index) in contacts">
+                <div class="datiUser">
+                  <img class="friendsImg" src="img/avatar_1.jpg" />
+                  <div class="nomeText">
+                    <h5>Name</h5>
+                    <h6>Ultimo messaggio</h6>
+                  </div>
+                </div>
+                <div class="ora"><h6>ora</h6></div>
+              </li>
+            </ul>
+          </div>
+          <!-- fine caselle utente-->
           <!-- fine header left side-->
         </div>
         <!-- fine left side -->
