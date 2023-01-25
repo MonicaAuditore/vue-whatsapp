@@ -231,3 +231,23 @@ ul {
   border-radius: 5px;
   font-size: 12px;
 }
+
+.message {
+  height: 20px;
+  padding: 30px;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.sent {
+  background-color: #d5f9ba;
+  float: right;
+}
+
+.received {
+  background-color: #ffffff;
+}
