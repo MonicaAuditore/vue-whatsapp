@@ -153,13 +153,20 @@ h6 {
 }
 
 .mainUsers {
-  padding: 0 15px;
   overflow-x: auto;
   height: 64%;
 }
 
 ul {
   list-style: none;
+}
+
+li {
+  padding: 0px 10px;
+}
+
+li:hover {
+  background-color: #e3e3e3;
 }
 
 .friendsBox {

@@ -67,10 +67,10 @@
             <ul>
               <li
                 id="idLi"
-                @click="activeTrueFalse(index)"
                 class="friendsBox"
-                :class="testored(index)"
                 v-for="(singleUser, index) in contacts"
+                @click="activeTrueFalse(index)"
+                :class="testored(singleUser)"
               >
                 <div class="datiUser">
                   <img

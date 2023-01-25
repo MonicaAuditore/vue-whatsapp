@@ -4,12 +4,13 @@ createApp({
   data() {
     return {
       utenteCorrente: "red",
-      active: true,
+      active: false,
       contacts: [
         {
-          name: "Michele",
+          name: "Ivan",
           avatar: "_1",
           visible: true,
+
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -32,6 +33,7 @@ createApp({
           name: "Fabio",
           avatar: "_2",
           visible: true,
+
           messages: [
             {
               date: "20/03/2020 16:30:00",
@@ -171,16 +173,19 @@ createApp({
     };
   },
   methods: {
-    activeTrueFalse() {
+    activeTrueFalse(index) {
       this.active = !this.active;
       console.log(this.active);
+
+      this.contacts[0] = this.contacts[3];
     },
 
-    testored(index) {
-      if (this.active) {
+    testored() {
+      if (!this.active) {
         return;
       } else {
         return this.utenteCorrente;
+        // return this.contacts[index].utenteCorrente;
       }
     },
   },
