@@ -65,9 +65,12 @@
           <!-- inizio caselle utente-->
           <div class="mainUsers">
             <ul>
-              <li class="friendsBox" v-for="(singleUser, index) in contacts">
+              <li
+                @click="assegnaActive(index)"
+                class="friendsBox"
+                v-for="(singleUser, index) in contacts"
+              >
                 <div class="datiUser">
-                  <!-- <img class="friendsImg" :src="singleUser.avatar" /> -->
                   <img
                     class="friendsImg"
                     :src="'img/avatar' + singleUser.avatar + '.jpg'"
@@ -90,9 +93,12 @@
         <div class="rightSide">
           <div class="header header-right">
             <div class="userFirst">
-              <img class="userimg" src="img/avatar_1.jpg" class="cover" />
+              <img
+                class="friendsImg"
+                :src="'img/avatar' + contacts[0].avatar + '.jpg'"
+              />
               <div class="textUser">
-                <h5>Michele</h5>
+                <h5>{{contacts[0].name}}</h5>
                 <h6>Ultimo accesso oggi alle 12.00</h6>
               </div>
             </div>
@@ -105,11 +111,10 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <div class="message sent">
-                <p>Hai portato a spasso il cane?</p>
-                <div class="orario">orario</div>
-              </div>
-              <div class="message sent">
-                <p>Ricordati di stendere i panni</p>
+                <p>
+                  {{contacts[0].messages}}
+                  <!-- Ricordati di stendere i panni -->
+                </p>
                 <div class="orario">orario</div>
               </div>
               <div class="message received">
