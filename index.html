@@ -66,16 +66,17 @@
           <div class="mainUsers">
             <ul>
               <li
+                @click="currentContact = index"
+                :class="{red : visible}"
                 id="idLi"
                 class="friendsBox"
                 v-for="(singleUser, index) in contacts"
-                @click="activeTrueFalse(index)"
-                :class="testored(singleUser)"
               >
                 <div class="datiUser">
                   <img
                     class="friendsImg"
                     :src="'img/avatar' + singleUser.avatar + '.jpg'"
+                    :alt="singleUser.name"
                   />
 
                   <div class="nomeText">
@@ -97,10 +98,10 @@
             <div class="userFirst">
               <img
                 class="friendsImg"
-                :src="'img/avatar' + contacts[0].avatar + '.jpg'"
+                :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'"
               />
               <div class="textUser">
-                <h5>{{contacts[0].name}}</h5>
+                <h5>{{contacts[currentContact].name}}</h5>
                 <h6>Ultimo accesso oggi alle 12.00</h6>
               </div>
             </div>
@@ -113,14 +114,11 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <div class="message sent">
-                <p>
-                  {{contacts[0].messages}}
-                  <!-- Ricordati di stendere i panni -->
-                </p>
+                <p>{{contacts[currentContact].messages}}</p>
                 <div class="orario">orario</div>
               </div>
               <div class="message received">
-                <p>Tutto fatto!</p>
+                <p>{{contacts[currentContact].messages}}</p>
                 <div class="orario">orario</div>
               </div>
             </div>

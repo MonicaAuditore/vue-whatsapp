@@ -40,6 +40,9 @@ h6 {
   height: 100%;
   background-color: #fff;
   border-right: 1px solid rgb(211, 211, 211);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -247,29 +250,29 @@ li:hover {
 
 .message {
   height: 20px;
-  padding: 30px 17px;
+  padding: 26px 17px;
   margin: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  width: 50%;
+  min-width: 30%;
+  max-width: 60%;
 }
 
 .orario {
   align-self: self-start;
+  font-size: 10px;
 }
 
 .sent {
   background-color: #d5f9ba;
-  align-self: end;
+  align-self: flex-end;
 }
 
 .received {
   background-color: #ffffff;
-}
-
-.corrent {
+  align-self: flex-start;
 }
 
 .red {
