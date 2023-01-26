@@ -114,11 +114,16 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <div class="message sent">
-                <p>{{contacts[currentContact].messages}}</p>
+                <p>{{contacts[currentContact].messages[0].message}}</p>
+
+                <div class="orario">orario</div>
+              </div>
+              <div class="message sent">
+                <p>{{contacts[currentContact].messages[1].message}}</p>
                 <div class="orario">orario</div>
               </div>
               <div class="message received">
-                <p>{{contacts[currentContact].messages}}</p>
+                <p>{{contacts[currentContact].messages[2].message}}</p>
                 <div class="orario">orario</div>
               </div>
             </div>
