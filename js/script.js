@@ -170,7 +170,7 @@ createApp({
             },
             {
               date: "10/01/2020 15:51:00",
-              message: "OK!!",
+              message: "OK!",
               status: "received",
             },
           ],
