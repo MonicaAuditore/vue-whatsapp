@@ -182,10 +182,9 @@ createApp({
     usersList() {
       if (this.searchValue.trim().length > 0) {
         return this.contacts.filter((contact) =>
-          contact.name.includes(this.searchValue)
+          contact.name.includes(this.searchValue.trim())
         );
       }
-
       return this.contacts;
     },
   },
