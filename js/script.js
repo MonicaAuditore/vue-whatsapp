@@ -8,11 +8,8 @@ createApp({
       currentContact: 0,
 
       newInputMessage: "",
-      // {
-      //   date: "",
-      //   message: "",
-      //   status: "sent",
-      // },
+
+      searchValue: "",
 
       contacts: [
         {
@@ -181,6 +178,17 @@ createApp({
       ],
     };
   },
+  computed: {
+    usersList() {
+      if (this.searchValue.trim().length > 0) {
+        return this.contacts.filter((contact) =>
+          contact.name.includes(this.searchValue)
+        );
+      }
+
+      return this.contacts;
+    },
+  },
   methods: {
     inserisciTesto(currentContact) {
       this.contacts[currentContact].messages.push({
@@ -191,26 +199,17 @@ createApp({
       this.newInputMessage = "";
     },
 
-    // risposta: function () {
-    //   setTimeout(function (currentContact) {
-    //     this.contacts[currentContact].messages.push({
-    //       date: "10/01/2020 15:50:00",
-    //       message: "ok",
-    //       status: "received",
-    //     });
-    //   }, 1000);
-    // },
-
-    risposta(currentContact) {
-      this.contacts[currentContact].messages.push({
-        date: "10/01/2020 15:50:00",
-        message: "ok",
-        status: "received",
-      });
+    risposta: function (currentContact) {
+      setTimeout(() => {
+        console.log(currentContact);
+        console.log(this.contacts);
+        console.log(this.contacts[currentContact]);
+        this.contacts[currentContact].messages.push({
+          date: "10/01/2020 15:50:00",
+          message: "ok",
+          status: "received",
+        });
+      }, 1000);
     },
-  },
-
-  mounted() {
-    setTimeout(this.risposta, 1000);
   },
 }).mount("#root");
