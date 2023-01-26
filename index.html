@@ -127,12 +127,16 @@
             <div class="">
               <i class="i fa-regular fa-face-smile"></i>
             </div>
-            <div class="inputMessaggio">
+            <div
+              class="inputMessaggio"
+              @keyup.enter="inserisciTesto(currentContact)"
+            >
               <input
                 type="text"
                 id=""
                 name=""
                 placeholder="Scrivi un messaggio"
+                v-model="newInputMessage"
               />
             </div>
             <div class="">

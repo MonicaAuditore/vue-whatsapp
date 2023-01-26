@@ -5,10 +5,14 @@ createApp({
     return {
       ricevuto: "received",
       inviato: "sent",
-
       currentContact: 0,
 
-      red: "red",
+      newInputMessage: "",
+      // {
+      //   date: "",
+      //   message: "",
+      //   status: "sent",
+      // },
 
       contacts: [
         {
@@ -177,5 +181,13 @@ createApp({
       ],
     };
   },
-  methods: {},
+  methods: {
+    inserisciTesto(currentContact) {
+      this.contacts[currentContact].messages.push({
+        date: "10/01/2020 15:50:00",
+        message: this.newInputMessage,
+        status: "sent",
+      });
+    },
+  },
 }).mount("#root");
