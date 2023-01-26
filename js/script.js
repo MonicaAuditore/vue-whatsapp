@@ -191,7 +191,16 @@ createApp({
       this.newInputMessage = "";
     },
 
-    // this.setTimeout(risposta, 1000)
+    // risposta: function () {
+    //   setTimeout(function (currentContact) {
+    //     this.contacts[currentContact].messages.push({
+    //       date: "10/01/2020 15:50:00",
+    //       message: "ok",
+    //       status: "received",
+    //     });
+    //   }, 1000);
+    // },
+
     risposta(currentContact) {
       this.contacts[currentContact].messages.push({
         date: "10/01/2020 15:50:00",
@@ -199,5 +208,9 @@ createApp({
         status: "received",
       });
     },
+  },
+
+  mounted() {
+    setTimeout(this.risposta, 1000);
   },
 }).mount("#root");
