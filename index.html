@@ -129,7 +129,7 @@
             </div>
             <div
               class="inputMessaggio"
-              @keyup.enter="inserisciTesto(currentContact)"
+              @keyup.enter="inserisciTesto(currentContact), risposta(currentContact)"
             >
               <input
                 type="text"
