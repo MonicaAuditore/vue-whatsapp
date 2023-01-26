@@ -6,9 +6,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   min-height: 100vh;
   background: linear-gradient(
     #009688 0%,
@@ -25,12 +22,10 @@ h6 {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 20px auto;
   position: relative;
   display: flex;
   max-width: 90%;
-  /* width: 1396px; */
-  /* max-width: 100%; */
   height: calc(100vh - 40px);
   background: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
@@ -276,8 +271,4 @@ li:hover {
 .received {
   background-color: #ffffff;
   align-self: flex-start;
-}
-
-.red {
-  color: red;
 }
