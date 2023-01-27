@@ -7,10 +7,13 @@ createApp({
       inviato: "sent",
       currentContact: 0,
 
+      inputLetters: "",
+
       newInputMessage: "",
 
       searchValue: "",
 
+      hidden: "hidden",
       contacts: [
         {
           name: "Ivan",
@@ -48,7 +51,7 @@ createApp({
             },
             {
               date: "20/03/2020 16:30:55",
-              message: "Bene grazie! Stasera ci vediamo?",
+              message: "Bene grazie! Oggi ci vediamo?",
               status: "received",
             },
             {
@@ -165,7 +168,7 @@ createApp({
             },
             {
               date: "10/01/2020 15:50:00",
-              message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
+              message: "No, l'ho già mangiata ieri, ordiniamo da Falafeel!",
               status: "sent",
             },
             {
@@ -178,18 +181,27 @@ createApp({
       ],
     };
   },
-  computed: {
-    usersList() {
-      if (this.searchValue.trim().length > 0) {
-        return this.contacts.filter((contact) =>
-          contact.name
-            .toLowerCase()
-            .includes(this.searchValue.trim().toLowerCase())
-        );
-      }
-      return this.contacts;
-    },
-  },
+
+  /*Opzione 1 - Milestone 4 - ricerca utenti: 
+  per far funzionare la ricerca creata in computed, devo aggiungere questo nell'input dell search:
+  <input v-model="searchValue" ecc....
+  
+  e mettere userList al posto di contacts quando genero tutti i div degli utenti:
+  v-for="(singleUser, index) in usersList"*/
+
+  // computed: {
+  //   usersList() {
+  //     if (this.searchValue.trim().length > 0) {
+  //       return this.contacts.filter((contact) =>
+  //         contact.name
+  //           .toLowerCase()
+  //           .includes(this.searchValue.trim().toLowerCase())
+  //       );
+  //     }
+  //     return this.contacts;
+  //   },
+  // },
+
   methods: {
     inserisciTesto(currentContact) {
       this.contacts[currentContact].messages.push({
@@ -206,11 +218,26 @@ createApp({
         console.log(this.contacts);
         console.log(this.contacts[currentContact]);
         this.contacts[currentContact].messages.push({
-          date: "10/01/2020 15:50:00",
+          date: "10/01/2020 15:52A:00",
           message: "ok",
           status: "received",
         });
       }, 1000);
+    },
+
+    /* Opzione 2 - Milestone 4 - ricerca utenti:
+  Se l'user ha visible:true, rendilo visibile, altrimenti non mostrarlo;
+  Imposta visible:false agli user che, nel nome, non hanno incluse le lettere che scrivo all'interno dell'input;
+  */
+    comparazione() {
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i].name.toLowerCase().includes(this.inputLetters)) {
+          console.log("ok");
+        } else {
+          console.log("no");
+          this.contacts[i].visible = false;
+        }
+      }
     },
   },
 }).mount("#root");

@@ -53,8 +53,10 @@
           </div>
           <div class="search">
             <div>
+              <!-- v-model="searchValue" -->
               <input
-                v-model="searchValue"
+                @keyup.enter="comparazione(singleUser)"
+                v-model="inputLetters"
                 type="text"
                 id=""
                 name=""
@@ -64,14 +66,16 @@
             </div>
           </div>
           <!-- inizio caselle utente-->
+
           <div class="mainUsers">
             <ul>
+              <!-- cambio "...in contacts" con "...in userList" per il filtraggio nomi -->
+
               <li
                 @click="currentContact = index"
-                :class="{red : visible}"
-                id="idLi"
                 class="friendsBox"
-                v-for="(singleUser, index) in usersList"
+                v-for="(singleUser, index) in contacts"
+                :class="singleUser.visible ? '' : 'hidden'"
               >
                 <div class="datiUser">
                   <img
@@ -89,6 +93,7 @@
               </li>
             </ul>
           </div>
+
           <!-- fine caselle utente-->
           <!-- fine header left side-->
         </div>
@@ -120,6 +125,7 @@
                 v-for="(message, index) in contacts[currentContact].messages"
               >
                 <p>{{message.message}}</p>
+                <p class="orario">{{message.date}}</p>
               </div>
             </div>
           </div>
