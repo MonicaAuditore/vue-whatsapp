@@ -281,12 +281,12 @@ li:hover {
 .messaggioDelete {
   background: #ffffff;
 
-  width: 250px;
+  width: 165px;
   -webkit-box-shadow: 5px 5px 7px -1px rgba(100, 100, 100, 0.377);
   box-shadow: 5px 5px 7px -1px rgba(100, 100, 100, 0.377);
   position: absolute;
-  left: 0px;
-  top: 0px;
+  right: 8px;
+  top: 58px;
   z-index: 1;
 }
 
