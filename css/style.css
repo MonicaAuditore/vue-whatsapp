@@ -274,14 +274,10 @@ li:hover {
   align-self: flex-start;
 }
 
-.hidden {
-  display: none;
-}
-
 .messaggioDelete {
   background: #ffffff;
 
-  width: 165px;
+  width: 138px;
   -webkit-box-shadow: 5px 5px 7px -1px rgba(100, 100, 100, 0.377);
   box-shadow: 5px 5px 7px -1px rgba(100, 100, 100, 0.377);
   position: absolute;
@@ -307,6 +303,6 @@ li:hover {
   display: block;
 }
 
-.nascondi {
+.hidden {
   display: none;
 }
