@@ -54,8 +54,9 @@
           <div class="search">
             <div>
               <!-- v-model="searchValue" -->
+              <!-- @change="comparazione()" -->
               <input
-                @keyup.enter="comparazione(singleUser)"
+                @keyup.enter="comparazione()"
                 v-model="inputLetters"
                 type="text"
                 id=""
@@ -117,13 +118,22 @@
               <i class="i fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
+          <!-- :class="messaggioVisible == true ? '' : ''" -->
           <div class="main">
             <div class="TuttiImessaggi">
               <div
+                @click="deleteMessage(index)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
+                <div :class="messaggioVisible == true ? 'visible' : 'nascondi'">
+                  <div class="messaggioDelete">
+                    <p class="info">Message info</p>
+                    <p class="delete">cancella</p>
+                  </div>
+                </div>
+
                 <p>{{message.message}}</p>
                 <p class="orario">{{message.date}}</p>
               </div>

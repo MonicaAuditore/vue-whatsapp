@@ -13,6 +13,8 @@ createApp({
 
       searchValue: "",
 
+      messaggioVisible: "false",
+
       hidden: "hidden",
       contacts: [
         {
@@ -238,6 +240,11 @@ createApp({
           this.contacts[i].visible = false;
         }
       }
+    },
+
+    deleteMessage(index) {
+      console.log("delete");
+      this.messaggioVisible = true;
     },
   },
 }).mount("#root");
