@@ -118,23 +118,22 @@
               <i class="i fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-          <!-- :class="messaggioVisible == true ? '' : ''" -->
+          <!--  -->
           <div class="main">
             <div class="TuttiImessaggi">
               <div
-                @click="deleteMessage(currentContact)"
+                @click="deleteMessage(currentContact, index)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
-                <!-- <div  == true ? 'visible' : 'nascondi'"> -->
-                <div class="messaggioDelete nascondi">
+                <div class="messaggioDelete">
                   <p class="info">Message info</p>
                   <p class="delete">cancella</p>
                 </div>
-                <!-- </div> -->
+                <!--  -->
 
-                <p>{{message.message}} {{index}}</p>
+                <p>{{message.message}}</p>
                 <p class="orario">{{message.date}}</p>
               </div>
             </div>
