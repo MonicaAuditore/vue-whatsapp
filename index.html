@@ -122,19 +122,19 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <div
-                @click="deleteMessage(index)"
+                @click="deleteMessage(currentContact)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
-                <div :class="messaggioVisible == true ? 'visible' : 'nascondi'">
-                  <div class="messaggioDelete">
-                    <p class="info">Message info</p>
-                    <p class="delete">cancella</p>
-                  </div>
+                <!-- <div  == true ? 'visible' : 'nascondi'"> -->
+                <div class="messaggioDelete nascondi">
+                  <p class="info">Message info</p>
+                  <p class="delete">cancella</p>
                 </div>
+                <!-- </div> -->
 
-                <p>{{message.message}}</p>
+                <p>{{message.message}} {{index}}</p>
                 <p class="orario">{{message.date}}</p>
               </div>
             </div>

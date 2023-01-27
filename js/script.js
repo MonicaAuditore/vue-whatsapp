@@ -242,9 +242,10 @@ createApp({
       }
     },
 
-    deleteMessage(index) {
+    deleteMessage(currentContact) {
       console.log("delete");
-      this.messaggioVisible = true;
+      this.contacts[currentContact].messages.classList.add("visible");
+      // this.messaggioVisible = true;
     },
   },
 }).mount("#root");
