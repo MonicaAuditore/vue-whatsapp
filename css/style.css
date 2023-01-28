@@ -307,7 +307,8 @@ li:hover {
   display: none;
 }
 
-.ultimoMess {
+.ultimo {
   font-size: 8px;
   color: #707070;
+  padding-top: 5px;
 }

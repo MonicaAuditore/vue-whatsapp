@@ -91,15 +91,20 @@
                       v-for="(ultimoMess, index) in contacts[index].messages"
                     >
                       <h6
-                        class="ultimoMess"
+                        class="ultimo"
                         v-if="index == contacts[index].messages.length -1"
                       >
-                        {{ultimoMess.message }}
+                        {{ultimoMess.message}}
                       </h6>
                     </span>
                   </div>
                 </div>
-                <div class="ora"><h6>12.34</h6></div>
+                <!-- <span
+                  v-for="(orario, index) in contacts[index].messages[currentContact].date"
+                ></span> -->
+                <div class="ora">
+                  <h6 class="ultimo">12.34</h6>
+                </div>
               </li>
             </ul>
           </div>
@@ -131,6 +136,7 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <!-- :class="message.cancella == 'true' ? hidden : ''" se aggiungo anche questa classe, che cancella il messaggio, la classe che assegna sent o received si annulla-->
+
               <div
                 @click="menuDelete(index)"
                 class="message"
@@ -174,6 +180,9 @@
       </div>
     </div>
     <!-- divisore -->
+    <script src="
+https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js
+"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

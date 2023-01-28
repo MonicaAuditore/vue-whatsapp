@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      dt: luxon.DateTime,
+
       ricevuto: "received",
       inviato: "sent",
       currentContact: 0,
@@ -209,6 +211,7 @@ createApp({
   //   },
   // },
 
+  //LUXON NON FUNZIONANTE: date: dt.now().tolocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
   methods: {
     inserisciTesto(currentContact) {
       this.contacts[currentContact].messages.push({
@@ -225,7 +228,7 @@ createApp({
         console.log(this.contacts);
         console.log(this.contacts[currentContact]);
         this.contacts[currentContact].messages.push({
-          date: "10/01/2020 15:52A:00",
+          date: "10/01/2020 15:52:00",
           message: "ok",
           status: "received",
         });
@@ -278,3 +281,13 @@ createApp({
     },
   },
 }).mount("#root");
+
+/*
+Problemi:
+1. Luxon;
+2. problema alla classe della tab cancella messaggio;
+3. problema nell'importazione ultimo messaggio nell'elenco contatti;
+
+Da fare:
+4. spezzare data e ora;
+*/
