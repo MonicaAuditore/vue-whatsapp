@@ -16,9 +16,11 @@ createApp({
       messaggioVisible: false,
 
       messaggioCliccato: [],
-      trueFlase: false,
+      isActive: false,
 
+      visible: "visible",
       hidden: "hidden",
+
       contacts: [
         {
           name: "Ivan",
@@ -245,22 +247,38 @@ createApp({
       }
     },
 
-    deleteMessage(currentContact, index) {
-      console.log("currentContact: ", currentContact, " index: ", index);
+    // myFilter: function() {
+    //   this.isActive = !this.isActive;
 
-      this.messaggioCliccato.push({
-        indexMessaggio: index,
-        indexCurrentContact: currentContact,
-        mostraDelete: true,
-      });
-      console.log(this.messaggioCliccato);
-
-      console.log(this.messaggioCliccato);
-      if (this.messaggioCliccato.index == currentContact[index]) {
-        console.log("funziona");
-        this.trueFlase = true;
-        console.log(this.trueFlase);
+    deleteMessage(index) {
+      for (
+        let i = 0;
+        i < this.contacts[this.currentContact].messages.length;
+        i++
+      ) {
+        this.contacts[this.currentContact].messages[i].menu = "false";
       }
+      console.log(this.contacts[this.currentContact].messages);
+
+      i = index;
+
+      this.contacts[this.currentContact].messages[i].menu = "true";
+      console.log(this.contacts[this.currentContact].messages);
+
+      //----------------------------------------------------------------------------
+
+      // console.log("currentContact: ", currentContact, " index: ", index);
+      // this.messaggioCliccato.push({
+      //   indexMessaggio: index,
+      //   indexCurrentContact: currentContact,
+      // });
+      // console.log(this.messaggioCliccato);
+      // console.log(this.messaggioCliccato);
+      // if (this.messaggioCliccato.index == currentContact[index]) {
+      //   console.log("funziona");
+      //   this.trueFlase = true;
+      //   console.log(this.trueFlase);
+      // }
     },
   },
 }).mount("#root");

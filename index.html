@@ -122,15 +122,14 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <div
-                @click="deleteMessage(currentContact, index)"
+                @click="deleteMessage(index)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
-                <!-- :class="trueFlase = false ?  'nascondi' : 'visible'" -->
                 <div
                   class="messaggioDelete"
-                  :class="{ 'hidden' : index !== 0 && currentContact !== 0}"
+                  :class="message.menu == 'false' ? hidden : visible"
                 >
                   <p class="info">Message info</p>
                   <p class="delete">Delete message</p>
