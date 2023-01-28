@@ -264,21 +264,6 @@ createApp({
 
       this.contacts[this.currentContact].messages[i].menu = "true";
       console.log(this.contacts[this.currentContact].messages);
-
-      //----------------------------------------------------------------------------
-
-      // console.log("currentContact: ", currentContact, " index: ", index);
-      // this.messaggioCliccato.push({
-      //   indexMessaggio: index,
-      //   indexCurrentContact: currentContact,
-      // });
-      // console.log(this.messaggioCliccato);
-      // console.log(this.messaggioCliccato);
-      // if (this.messaggioCliccato.index == currentContact[index]) {
-      //   console.log("funziona");
-      //   this.trueFlase = true;
-      //   console.log(this.trueFlase);
-      // }
     },
   },
 }).mount("#root");
