@@ -87,7 +87,16 @@
 
                   <div class="nomeText">
                     <h5>{{singleUser.name}}</h5>
-                    <h6>Ultimo messaggio inviato</h6>
+                    <span
+                      v-for="(ultimoMess, index) in contacts[index].messages"
+                    >
+                      <h6
+                        class="ultimoMess"
+                        v-if="index == contacts[index].messages.length -1"
+                      >
+                        {{ultimoMess.message }}
+                      </h6>
+                    </span>
                   </div>
                 </div>
                 <div class="ora"><h6>12.34</h6></div>

@@ -247,9 +247,6 @@ createApp({
       }
     },
 
-    // myFilter: function() {
-    //   this.isActive = !this.isActive;
-
     menuDelete(index) {
       for (
         let i = 0;

@@ -306,3 +306,8 @@ li:hover {
 .hidden {
   display: none;
 }
+
+.ultimoMess {
+  font-size: 8px;
+  color: #707070;
+}
