@@ -250,7 +250,7 @@ createApp({
     // myFilter: function() {
     //   this.isActive = !this.isActive;
 
-    deleteMessage(index) {
+    menuDelete(index) {
       for (
         let i = 0;
         i < this.contacts[this.currentContact].messages.length;
@@ -258,11 +258,25 @@ createApp({
       ) {
         this.contacts[this.currentContact].messages[i].menu = "false";
       }
+
+      i = index;
+      this.contacts[this.currentContact].messages[i].menu = "true";
+      console.log(this.contacts[this.currentContact].messages);
+    },
+
+    cancella(index) {
+      for (
+        let i = 0;
+        i < this.contacts[this.currentContact].messages.length;
+        i++
+      ) {
+        this.contacts[this.currentContact].messages[i].cancella = "false";
+      }
       console.log(this.contacts[this.currentContact].messages);
 
       i = index;
 
-      this.contacts[this.currentContact].messages[i].menu = "true";
+      this.contacts[this.currentContact].messages[i].cancella = "true";
       console.log(this.contacts[this.currentContact].messages);
     },
   },

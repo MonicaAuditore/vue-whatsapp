@@ -121,15 +121,16 @@
           <!--  -->
           <div class="main">
             <div class="TuttiImessaggi">
+              <!-- :class="message.cancella == 'true' ? hidden : ''" se aggiungo anche questa classe, che cancella il messaggio, la classe che assegna sent o received si annulla-->
               <div
-                @click="deleteMessage(index)"
+                @click="menuDelete(index)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
                 <div class="messaggioDelete" v-if="message.menu == 'true'">
                   <p class="info">Message info</p>
-                  <p class="delete">Delete message</p>
+                  <p class="delete" @click="cancella(index)">Delete message</p>
                 </div>
                 <!--  -->
 
