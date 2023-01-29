@@ -100,7 +100,7 @@
                   </div>
                 </div>
                 <!-- <span
-                  v-for="(orario, index) in contacts[index].messages[currentContact].date"
+                  v-for="(orario, index) in contacts[index].messages[currentContact].ora"
                 ></span> -->
                 <div class="ora">
                   <h6 class="ultimo">12.34</h6>
@@ -151,7 +151,9 @@
 
                 <p>{{message.message}}</p>
 
-                <p :class="splitedDate()" class="orario">{{message.ora}}</p>
+                <p :class="splitedDate(index)" class="orario">
+                  {{message.ora}}
+                </p>
               </div>
             </div>
           </div>
