@@ -247,6 +247,9 @@ createApp({
           console.log("no");
           this.contacts[i].visible = false;
         }
+        if (this.inputLetters == "") {
+          this.contacts[i].visible = true;
+        }
       }
     },
 
