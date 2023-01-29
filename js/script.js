@@ -279,15 +279,23 @@ createApp({
       this.contacts[this.currentContact].messages[i].cancella = "true";
       console.log(this.contacts[this.currentContact].messages);
     },
+
+    //Funzione per trovare la data
+    splitedDate() {
+      for (let i = 0; i < this.contacts.length; i++) {
+        let ora = this.contacts[i].messages[0].date.split(" ")[1];
+        this.contacts[i].messages[0].ora = ora;
+        console.log(this.contacts[i].messages);
+      }
+    },
   },
 }).mount("#root");
 
 /*
 Problemi:
-1. Luxon;
-2. problema alla classe della tab cancella messaggio;
-3. problema nell'importazione ultimo messaggio nell'elenco contatti;
 
-Da fare:
-4. spezzare data e ora;
+1. problema alla classe della tab cancella messaggio, non mi fa inserire un secondo v-bind;
+2. problema nell'importazione ultimo messaggio nell'elenco contatti, chi ha solo 2 messaggi non importa l'ultimo;
+3. problema con l'inserimento di date in tutti gli oggetti di "messages" dei contattai
+4. Non funziona Luxon;
 */
