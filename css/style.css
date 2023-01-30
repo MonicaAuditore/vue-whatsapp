@@ -163,6 +163,7 @@ ul {
 
 li {
   padding: 0px 10px;
+  cursor: pointer;
 }
 
 li:hover {

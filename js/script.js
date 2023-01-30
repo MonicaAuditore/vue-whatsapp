@@ -228,7 +228,7 @@ createApp({
         console.log(this.contacts);
         console.log(this.contacts[currentContact]);
         this.contacts[currentContact].messages.push({
-          date: "10/01/2020 15:52:00",
+          date: "10/01/2020 15:50:02",
           message: "ok",
           status: "received",
         });
