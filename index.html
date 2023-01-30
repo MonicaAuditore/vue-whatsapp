@@ -87,14 +87,10 @@
 
                   <div class="nomeText">
                     <h5>{{singleUser.name}}</h5>
-                    <span
-                      v-for="(ultimoMess, index) in contacts[index].messages"
-                    >
-                      <h6
-                        class="ultimo"
-                        v-if="index == contacts[index].messages.length -1"
-                      >
-                        {{ultimoMess.message}}
+                    <span>
+                      <h6 class="ultimo">
+                        {{contacts[index].messages[contacts[index].messages.length
+                        -1].message}}
                       </h6>
                     </span>
                   </div>
@@ -136,11 +132,12 @@
           <div class="main">
             <div class="TuttiImessaggi">
               <!-- :class="message.cancella == 'true' ? hidden : ''" se aggiungo anche questa classe, che cancella il messaggio, la classe che assegna sent o received si annulla-->
-
+              <!-- :class="'inviato' : (message.status == 'sent'),
+              'hidden': (message.cancella == 'true')"  -->
               <div
                 @click="menuDelete(index)"
                 class="message"
-                :class="message.status == 'sent' ? inviato : ricevuto"
+                :class="message.status == 'sent' ? inviato : ricevuto, message.cancella == 'true' ? hidden : ''"
                 v-for="(message, index) in contacts[currentContact].messages"
               >
                 <div class="messaggioDelete" v-if="message.menu == 'true'">

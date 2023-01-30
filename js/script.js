@@ -308,5 +308,6 @@ Problemi:
 1. problema alla classe della tab cancella messaggio, non mi fa inserire un secondo v-bind;
 2. problema nell'importazione ultimo messaggio nell'elenco contatti, per chi ha solo 2 messaggi non importa l'ultimo;
 3. problema con l'inserimento di date in tutti gli oggetti di "messages" dei contattai, importa solo l'ora dei messaggi dei primi 3 contatti
+
 4. Non funziona Luxon;
 */
