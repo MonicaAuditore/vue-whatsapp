@@ -295,22 +295,13 @@ createApp({
         console.log(this.contacts[index].messages);
       }
     },
-
-    // splitedDate() {
-    //   for (let i = 0; i < this.contacts.length; i++) {
-    //     let ora = this.contacts[i].messages[0].date.split(" ")[1];
-    //     this.contacts[i].messages[0].ora = ora;
-    //     console.log(this.contacts[i].messages);
-    //   }
-    // },
   },
 }).mount("#root");
 
 /*
 Problemi:
 
-1. problema alla classe della tab cancella messaggio, non mi fa inserire un secondo v-bind;
-2. problema nell'importazione ultimo messaggio nell'elenco contatti, per chi ha solo 2 messaggi non importa l'ultimo;
+2. problema nell'importazione ultimo messaggio nell'elenco contatti, non importa l'ultimo
 3. problema con l'inserimento di date in tutti gli oggetti di "messages" dei contattai, importa solo l'ora dei messaggi dei primi 3 contatti
 
 4. Non funziona Luxon;
