@@ -286,8 +286,12 @@ createApp({
     //Funzione per trovare la data
     splitedDate(index) {
       for (let i = 0; i < this.contacts[index].messages.length; i++) {
-        let ora = this.contacts[index].messages[i].date.split(" ")[1];
+        let ora = this.contacts[index].messages[i].date
+          .split(" ")[1]
+          .slice(0, 5);
+
         this.contacts[index].messages[i].ora = ora;
+
         console.log(this.contacts[index].messages);
       }
     },
