@@ -99,7 +99,10 @@
                   v-for="(orario, index) in contacts[index].messages[currentContact].ora"
                 ></span> -->
                 <div class="ora">
-                  <h6 class="ultimo">12.34</h6>
+                  <h6 class="ultimo">
+                    {{contacts[index].messages[contacts[index].messages.length
+                    -1].ora }}
+                  </h6>
                 </div>
               </li>
             </ul>
