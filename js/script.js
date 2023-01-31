@@ -264,6 +264,7 @@ createApp({
 
       i = index;
       this.contacts[this.currentContact].messages[i].menu = "true";
+      i = index;
       console.log(this.contacts[this.currentContact].messages);
     },
 
