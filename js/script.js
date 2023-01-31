@@ -256,7 +256,7 @@ createApp({
     menuDelete(index) {
       for (
         let i = 0;
-        i < this.contacts[this.currentContact].messages.length;
+        i < this.contacts[this.currentContact].messages.length - 1;
         i++
       ) {
         this.contacts[this.currentContact].messages[i].menu = "false";
@@ -271,7 +271,7 @@ createApp({
     cancella(index) {
       for (
         let i = 0;
-        i < this.contacts[this.currentContact].messages.length;
+        i < this.contacts[this.currentContact].messages.length - 1;
         i++
       ) {
         this.contacts[this.currentContact].messages[i].cancella = "false";
