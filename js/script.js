@@ -268,20 +268,30 @@ createApp({
       console.log(this.contacts[this.currentContact].messages);
     },
 
-    cancella(index) {
-      for (
-        let i = 0;
-        i < this.contacts[this.currentContact].messages.length - 1;
-        i++
-      ) {
-        this.contacts[this.currentContact].messages[i].cancella = "false";
-      }
-      console.log(this.contacts[this.currentContact].messages);
+    // cancella(index) {
+    //   for (
+    //     let i = 0;
+    //     i < this.contacts[this.currentContact].messages.length - 1;
+    //     i++
+    //   ) {
+    //     this.contacts[this.currentContact].messages[i].cancella = "false";
+    //   }
+    //   console.log(this.contacts[this.currentContact].messages);
+    //   i = index;
+    //   this.contacts[this.currentContact].messages[i].cancella = "true";
+    //   console.log(this.contacts[this.currentContact].messages);
+    // },
 
-      i = index;
+    cancella(index, currentContact) {
+      console.log("index", index, "currentContact", currentContact);
+      let mess = this.contacts[this.currentContact].messages[index].message;
+      console.log(mess);
+      // let deleteMess = mess.split(" ");
+      // let deleteMess = mess.slice(0, 10);
+      let deleteMess = "";
+      console.log("deleteMess", deleteMess);
 
-      this.contacts[this.currentContact].messages[i].cancella = "true";
-      console.log(this.contacts[this.currentContact].messages);
+      return deleteMess;
     },
 
     //Funzione per trovare la data
@@ -290,20 +300,8 @@ createApp({
         let ora = this.contacts[index].messages[i].date
           .split(" ")[1]
           .slice(0, 5);
-
-        this.contacts[index].messages[i].ora = ora;
-
-        console.log(this.contacts[index].messages);
+        return ora;
       }
     },
   },
 }).mount("#root");
-
-/*
-Problemi:
-
-2. problema nell'importazione ultimo messaggio nell'elenco contatti, non importa l'ultimo
-3. problema con l'inserimento di date in tutti gli oggetti di "messages" dei contattai, importa solo l'ora dei messaggi dei primi 3 contatti
-
-4. Non funziona Luxon;
-*/

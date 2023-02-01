@@ -99,10 +99,7 @@
                   v-for="(orario, index) in contacts[index].messages[currentContact].ora"
                 ></span> -->
                 <div class="ora">
-                  <h6 class="ultimo">
-                    {{contacts[index].messages[contacts[index].messages.length
-                    -1].ora }}
-                  </h6>
+                  <h6 class="ultimo">{{splitedDate(index)}}</h6>
                 </div>
               </li>
             </ul>
@@ -145,15 +142,15 @@
               >
                 <div class="messaggioDelete" v-if="message.menu == 'true'">
                   <p class="info">Message info</p>
-                  <p class="delete" @click="cancella(index)">Delete message</p>
+                  <p class="delete" @click="cancella(index, currentContact)">
+                    Delete message
+                  </p>
                 </div>
                 <!--  -->
 
                 <p>{{message.message}}</p>
 
-                <p :class="splitedDate(index)" class="orario">
-                  {{message.ora}}
-                </p>
+                <p class="orario">{{splitedDate(index)}}</p>
               </div>
             </div>
           </div>
