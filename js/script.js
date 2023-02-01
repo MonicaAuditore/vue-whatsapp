@@ -284,14 +284,13 @@ createApp({
 
     cancella(index, currentContact) {
       console.log("index", index, "currentContact", currentContact);
-      let mess = this.contacts[this.currentContact].messages[index].message;
-      console.log(mess);
-      // let deleteMess = mess.split(" ");
-      // let deleteMess = mess.slice(0, 10);
-      let deleteMess = "";
-      console.log("deleteMess", deleteMess);
+      let mess = this.contacts[this.currentContact].messages[index].message
+        .split(",")
+        .splice(1);
 
-      return deleteMess;
+      console.log("mess", mess);
+
+      return mess;
     },
 
     //Funzione per trovare la data
