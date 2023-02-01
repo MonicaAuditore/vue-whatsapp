@@ -253,7 +253,7 @@ createApp({
       }
     },
 
-    menuDelete(index) {
+    menuDelete(index, currentContact) {
       for (
         let i = 0;
         i < this.contacts[this.currentContact].messages.length - 1;
@@ -284,13 +284,12 @@ createApp({
 
     cancella(index, currentContact) {
       console.log("index", index, "currentContact", currentContact);
-      let mess = this.contacts[this.currentContact].messages[index].message
-        .split(",")
-        .splice(1);
+      this.contacts[this.currentContact].messages.splice(index, 1);
+      // let mess = this.contacts[this.currentContact].messages[index].message
+      //   .split(",")
+      //   .splice(1);
 
-      console.log("mess", mess);
-
-      return mess;
+      // console.log("mess", mess);
     },
 
     //Funzione per trovare la data

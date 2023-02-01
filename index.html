@@ -135,7 +135,7 @@
               <!-- :class="'inviato' : (message.status == 'sent'),
               'hidden': (message.cancella == 'true')"  -->
               <div
-                @click="menuDelete(index)"
+                @click="menuDelete(index, currentContact)"
                 class="message"
                 :class="message.status == 'sent' ? inviato : ricevuto, message.cancella == 'true' ? hidden : ''"
                 v-for="(message, index) in contacts[currentContact].messages"
