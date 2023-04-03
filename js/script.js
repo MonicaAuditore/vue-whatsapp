@@ -191,27 +191,6 @@ createApp({
     };
   },
 
-  /*Opzione 1 - Milestone 4 - ricerca utenti: 
-  per far funzionare la ricerca creata in computed, devo aggiungere questo nell'input dell search:
-  <input v-model="searchValue" ecc....
-  
-  e mettere userList al posto di contacts quando genero tutti i div degli utenti:
-  v-for="(singleUser, index) in usersList"*/
-
-  // computed: {
-  //   usersList() {
-  //     if (this.searchValue.trim().length > 0) {
-  //       return this.contacts.filter((contact) =>
-  //         contact.name
-  //           .toLowerCase()
-  //           .includes(this.searchValue.trim().toLowerCase())
-  //       );
-  //     }
-  //     return this.contacts;
-  //   },
-  // },
-
-  //LUXON NON FUNZIONANTE: date: dt.now().tolocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
   methods: {
     inserisciTesto(currentContact) {
       this.contacts[currentContact].messages.push({
@@ -253,20 +232,20 @@ createApp({
       }
     },
 
-    menuDelete(index, currentContact) {
-      for (
-        let i = 0;
-        i < this.contacts[this.currentContact].messages.length - 1;
-        i++
-      ) {
-        this.contacts[this.currentContact].messages[i].menu = "false";
-      }
+    // menuDelete(index, currentContact) {
+    //   for (
+    //     let i = 0;
+    //     i < this.contacts[this.currentContact].messages.length - 1;
+    //     i++
+    //   ) {
+    //     this.contacts[this.currentContact].messages[i].menu = "false";
+    //   }
 
-      i = index;
-      this.contacts[this.currentContact].messages[i].menu = "true";
-      i = index;
-      console.log(this.contacts[this.currentContact].messages);
-    },
+    //   i = index;
+    //   this.contacts[this.currentContact].messages[i].menu = "true";
+    //   i = index;
+    //   console.log(this.contacts[this.currentContact].messages);
+    // },
 
     // cancella(index) {
     //   for (
@@ -282,15 +261,10 @@ createApp({
     //   console.log(this.contacts[this.currentContact].messages);
     // },
 
-    cancella(index, currentContact) {
-      console.log("index", index, "currentContact", currentContact);
-      this.contacts[this.currentContact].messages.splice(index, 1);
-      // let mess = this.contacts[this.currentContact].messages[index].message
-      //   .split(",")
-      //   .splice(1);
-
-      // console.log("mess", mess);
-    },
+    // cancella(index, currentContact) {
+    //   console.log("index", index, "currentContact", currentContact);
+    //   this.contacts[this.currentContact].messages.splice(index, 1);
+    // },
 
     //Funzione per trovare la data
     splitedDate(index) {
