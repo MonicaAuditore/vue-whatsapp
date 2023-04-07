@@ -232,40 +232,6 @@ createApp({
       }
     },
 
-    // menuDelete(index, currentContact) {
-    //   for (
-    //     let i = 0;
-    //     i < this.contacts[this.currentContact].messages.length - 1;
-    //     i++
-    //   ) {
-    //     this.contacts[this.currentContact].messages[i].menu = "false";
-    //   }
-
-    //   i = index;
-    //   this.contacts[this.currentContact].messages[i].menu = "true";
-    //   i = index;
-    //   console.log(this.contacts[this.currentContact].messages);
-    // },
-
-    // cancella(index) {
-    //   for (
-    //     let i = 0;
-    //     i < this.contacts[this.currentContact].messages.length - 1;
-    //     i++
-    //   ) {
-    //     this.contacts[this.currentContact].messages[i].cancella = "false";
-    //   }
-    //   console.log(this.contacts[this.currentContact].messages);
-    //   i = index;
-    //   this.contacts[this.currentContact].messages[i].cancella = "true";
-    //   console.log(this.contacts[this.currentContact].messages);
-    // },
-
-    // cancella(index, currentContact) {
-    //   console.log("index", index, "currentContact", currentContact);
-    //   this.contacts[this.currentContact].messages.splice(index, 1);
-    // },
-
     //Funzione per trovare la data
     splitedDate(index) {
       for (let i = 0; i < this.contacts[index].messages.length; i++) {

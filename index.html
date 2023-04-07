@@ -53,8 +53,6 @@
           </div>
           <div class="search">
             <div>
-              <!-- v-model="searchValue" -->
-              <!-- @change="comparazione()" -->
               <input
                 @keypress="comparazione()"
                 v-model="inputLetters"
@@ -70,8 +68,6 @@
 
           <div class="mainUsers">
             <ul>
-              <!-- cambio "...in contacts" con "...in userList" per il filtraggio nomi -->
-
               <li
                 @click="currentContact = index"
                 class="friendsBox"
@@ -95,9 +91,6 @@
                     </span>
                   </div>
                 </div>
-                <!-- <span
-                  v-for="(orario, index) in contacts[index].messages[currentContact].ora"
-                ></span> -->
                 <div class="ora">
                   <h6 class="ultimo">{{splitedDate(index)}}</h6>
                 </div>
@@ -131,9 +124,6 @@
           <!--  -->
           <div class="main">
             <div class="TuttiImessaggi">
-              <!-- :class="message.cancella == 'true' ? hidden : ''" se aggiungo anche questa classe, che cancella il messaggio, la classe che assegna sent o received si annulla-->
-              <!-- :class="'inviato' : (message.status == 'sent'),
-              'hidden': (message.cancella == 'true')"  -->
               <div
                 @click="menuDelete(index, currentContact)"
                 class="message"
