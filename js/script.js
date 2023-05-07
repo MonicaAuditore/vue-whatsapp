@@ -3,8 +3,6 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      dt: luxon.DateTime,
-
       ricevuto: "received",
       inviato: "sent",
       currentContact: 0,
@@ -190,22 +188,32 @@ createApp({
       ],
     };
   },
-
+  // Metodo per inserire un nuovo messaggio nella chat corrente
   methods: {
     inserisciTesto(currentContact) {
+      // Aggiungi un nuovo oggetto messaggio all'array di messaggi del contatto corrente
       this.contacts[currentContact].messages.push({
         date: "10/01/2020 15:50:00",
         message: this.newInputMessage,
         status: "sent",
       });
+      // Resetta l'input per il nuovo messaggio
       this.newInputMessage = "";
     },
 
+    // Metodo per ottenere una risposta automatica dopo 1 secondo dall'invio di un messaggio
+
+    // La funzione utilizza il metodo "setTimeout" di JavaScript per creare un ritardo di
+    // 1s prima che il codice venga eseguito. Il metodo prende due parametri: una
+    // funzione anonima e il tempo di attesa in millisecondi.
+
     risposta: function (currentContact) {
+      // Attendi 1 secondo prima di eseguire la funzione
       setTimeout(() => {
         console.log(currentContact);
         console.log(this.contacts);
         console.log(this.contacts[currentContact]);
+        // Aggiungi un nuovo oggetto messaggio di risposta all'array di messaggi del contatto corrente
         this.contacts[currentContact].messages.push({
           date: "10/01/2020 15:50:02",
           message: "ok",
@@ -220,21 +228,27 @@ createApp({
   */
     comparazione() {
       for (let i = 0; i < this.contacts.length; i++) {
+        // Se il nome del contatto corrente contiene le lettere inserite dall'utente
         if (this.contacts[i].name.toLowerCase().includes(this.inputLetters)) {
           console.log("ok");
+          this.contacts[i].visible = true;
         } else {
+          // Imposta visible:false se il nome del contatto corrente non contiene le lettere inserite dall'utente
           console.log("no");
           this.contacts[i].visible = false;
         }
+        // Se l'input per la ricerca è vuoto, mostra tutti i contatti
         if (this.inputLetters == "") {
           this.contacts[i].visible = true;
         }
       }
     },
 
-    //Funzione per trovare la data
+    // Metodo per ottenere l'ora dell'ultimo messaggio nel contatto corrente
     splitedDate(index) {
+      // Scorri tutti i messaggi del contatto corrente
       for (let i = 0; i < this.contacts[index].messages.length; i++) {
+        // Estrapola l'ora del messaggio corrente
         let ora = this.contacts[index].messages[i].date
           .split(" ")[1]
           .slice(0, 5);
@@ -242,4 +256,5 @@ createApp({
       }
     },
   },
+  // Monta l'app Vue all'elemento con ID "root"
 }).mount("#root");
