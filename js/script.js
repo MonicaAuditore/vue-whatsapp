@@ -209,6 +209,9 @@ createApp({
 
     risposta: function (currentContact) {
       // Attendi 1 secondo prima di eseguire la funzione
+
+      //usiamo la arrow function per poter usare il "this"; con la fonzione normale in questo caso
+      // il this si referirebbe alla window;
       setTimeout(() => {
         console.log(currentContact);
         console.log(this.contacts);
