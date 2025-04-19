@@ -1,4 +1,4 @@
-# vue-whatsapp
+# WhatsApp web
 
 <!-- --------- -->
 
